@@ -1,10 +1,134 @@
 <!DOCTYPE html>
-<!--Arroyo Cult Arts Board-->
-<html>
-  <head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arroyo Cult Arts Board</title>
-  </head>
-  <body>
-    <p>Arroyo Cult Arts Board</p>
-  </body>
+    <style>
+        body {
+            background: url('background.JPG') repeat, #FFDAB9;
+            color: #4B3621;
+            font-family: Times, serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        #header {
+            background-color: #C19A6B;
+            border-bottom: 3px solid #8B4513;
+        }
+
+        #header h1 {
+            color: #FFF8DC;
+            padding-top: 20px;
+            font-size: 32px;
+            font-weight: bold; 
+        }
+        
+        #header p {
+            font-weight: bold; 
+        }
+
+        #main-content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #FFF8DC;
+            border: 2px solid #8B4513;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #8B4513;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        #footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #8B4513;
+            color: white;
+            font-size: 12px;
+        }
+
+        #header a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+        
+        #main-content a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+        
+        #footer a {
+            color: #FFF8DC;
+            text-decoration: none;
+        }
+
+        #header a:hover {
+            text-decoration: underline;
+        }
+        
+        #footer a:hover {
+            text-decoration: underline;
+        }
+        
+        #main-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Arroyo Cult Arts Board</h1>
+        <p><a href="#about">About</a> | <a href="#events">Events</a> | <a href="#support">Support</a> | <a href="#contact">Contact</a></p>
+    </div>
+
+    <div id="main-content">
+        <a id="about"><h2>About the Arroyo Cult Arts Board</h2></a>
+        <p>
+           Welcome to the Arroyo Cult Arts Board web page! We are dedicated to preserving and promoting the unique arts and cultural heritage of
+           our desert community. We host events, exhibitions, and workshops
+           celebrating this heritage.
+        </p>
+
+        <h2>Our Mission</h2>
+        <p>
+            To create opportunities for artistic expression, to foster appreciation for our region's unique art
+            traditions, and enrich the community through art. We strive to be a meeting place for artists and enthusiasts alike. Join us in keeping this heritage alive!
+        </p>
+
+        <a id="events"><h2>Upcoming Events</h2></a>
+        <ul>
+            <li><b>Desert Sketching Workshop:</b> November 15th</li>
+            <li><b>Nighttime and Nightskies Photography Workshop:</b> December 21st</li>
+            <li><b>Annual Arroyo Arts Festival:</b> May 10th-12th</li>
+        </ul>
+
+        <a id="support"><h2>Support Us</h2></a>
+        <p>
+            Love what we do? Consider becoming a sponsor or member to help us continue our work. Your support makes a
+            difference!
+        </p>
+
+        <a id="contact"><h2>Contact Us</h2></a>
+        <p>Stop by the community center Mondays and Wednesdays 12-5pm</p>
+        <p>Email the <a href="mailto:grafine.sextant@gmail.com">WebMaster</a></p>
+    </div>
+
+    <div id="footer">
+        Sponsored by the <b><a href="">Ground Falsing Institute</a></b>. <br>
+        © Arroyo Cult Arts Board. All Rights Reserved.
+    </div>
+</body>
+
 </html>
