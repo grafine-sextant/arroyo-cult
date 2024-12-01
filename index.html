@@ -84,6 +84,52 @@
         #main-content a:hover {
             text-decoration: underline;
         }
+        
+                #gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #8B4513;
+            background-color: #FFF8DC;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #FFF8DC;
+            text-align: center;
+            font-size: 14px;
+            padding: 5px 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-item-caption {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -106,6 +152,45 @@
             To create opportunities for artistic expression, to foster appreciation for our region's unique art
             traditions, and enrich the community through art. We strive to be a meeting place for artists and enthusiasts alike. Join us in keeping this heritage alive!
         </p>
+        
+        <div id="gallery">
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery3.jpg" alt="Dune Landscape">
+            <div class="gallery-item-caption">Dune Landscape</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery5.jpg" alt="Contrails">
+            <div class="gallery-item-caption">Contrails</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery9.jpg" alt="Watchful Moon">
+            <div class="gallery-item-caption">Watchful Moon</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery1.jpg" alt="Mountain Retreat">
+            <div class="gallery-item-caption">Mountain Retreat</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery7.png" alt="Safekeeping">
+            <div class="gallery-item-caption">Safekeeping</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery2.jpg" alt="Above the sands">
+            <div class="gallery-item-caption">Above the sands</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery4.jpg" alt="Tile Face 3">
+            <div class="gallery-item-caption">Tile Face 3</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery6.png" alt="Untitled">
+            <div class="gallery-item-caption">Untitled</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png" alt="Birth-Rebirth">
+            <div class="gallery-item-caption">Birth-Rebirth</div>
+        </div>
+    </div>
 
         <a id="events"><h2>Upcoming Events</h2></a>
         <ul>
