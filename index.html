@@ -13,18 +13,126 @@
             margin: 0;
             padding: 0;
             text-align: center;
+
+        }
+        
+        body.animate {
+            animation: somethingInTheBackground 2s infinite  steps(1);
+            animation: tryingSoHardToRemember 1s infinite steps(1);
         }
         
         #header {
             background-color: #C19A6B;
             border-bottom: 3px solid #8B4513;
         }
-
-        #header h1 {
+        #header h1.title {
             color: #FFF8DC;
             padding-top: 20px;
             font-size: 32px;
             font-weight: bold; 
+            position: abosolute;
+        }
+        #header h1.title::before, h1.title::after {
+            content: 'Arroyo Cult Arts Board';
+            display: block;
+            position: relative;
+            top: 50%;
+            left: 0px;
+        }
+        #header h1.title:hover::before {
+            #animation: title 0.3s linear 6;
+            color: #000;
+            z-index: 2;
+        }
+        #header h1.title:hover::after {
+            animation: title 0.03 linear 6 reverse;
+            color: #fff;
+            z-index: 1;
+        }
+        #header h1.title {
+            position: relative;
+            color: #FFF8DC;
+            font-size: 32px;
+            font-weight: bold;
+            #animation: memories-color 1s infinite;
+            overflow: hidden;
+        }
+        #header h1.title::before, 
+        #header h1.title::after {
+            content: 'Arroyo Cult Arts Board';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: #FFF8DC;
+            background: transparent;
+            animation: memories 0.5s infinite;
+            z-index: -1;
+        }
+        #header h1.title::after {
+            animation-delay: 0.2s;
+            color: #FF0000;
+        }
+        
+        
+        @keyframes title {
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            20%{
+                top: -5px;
+                left: 0px;
+            }
+            40%{
+                top: 10px;
+                left: 5px;
+            }
+            60%{
+                top: -10px;
+                left: 5px;
+            }
+            80%{
+                top: 5px;
+                left: -5px;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }
+        }
+        
+        @keyframes tryingSoHardToRemember {
+            0% {
+                background-position: 0 0;
+                filter: brightness(100%) blur(0px);
+            }
+            10% {
+                background-position: 50px -50px;
+                filter: brightness(120%) blur(2px);
+                width: 95%;
+            }
+            25% {
+                background-position: 50px -5px;
+                filter: brightness(120%) blur(2px);
+                width: 90%;
+            }
+            50% {
+                background-position: 50px 50px;
+                filter: brightness(80%) blur(1px);
+                width: 95%;
+                align: right;
+            }
+            65% {
+                background-position: 0px -20px;
+                filter: brightness(120%) blur(2px);
+                background: url(''), #000000;
+            }
+            75% {
+                background-position: 0px 0px;
+                filter: brightness(110%) blur(0px);
+            }
         }
         
         #header p {
@@ -40,9 +148,7 @@
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
         }
 
-        h2 {
-            color: #8B4513;
-        }
+
 
         ul {
             list-style-type: square;
@@ -75,6 +181,33 @@
 
         #header a:hover {
             text-decoration: underline;
+            animation: memories-color 1s infinite;
+        }
+        
+        #header a {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #header a::before, 
+        #header a::after {
+            content: 'ACAB';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            animation: tryToRemember 5s infinite ease-in-out;
+            #animation: memories-color 1s infinite;
+            z-index: -1;
+        }
+        
+        
+
+        #header a::after {
+            animation-delay: 0.2s;
+            color: #FF0000;
         }
         
         #footer a:hover {
@@ -85,7 +218,7 @@
             text-decoration: underline;
         }
         
-                #gallery {
+        #gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
@@ -130,12 +263,189 @@
         .gallery-item:hover .gallery-item-caption {
             opacity: 1;
         }
+        
+        
+        @keyframes memories {
+            0% {
+                transform: translate(0);
+                clip-path: inset(0 0 0 0);
+            }
+            20% {
+                transform: translate(-2px, -2px);
+                clip-path: inset(10% 0 30% 0);
+            }
+            40% {
+                transform: translate(2px, 2px);
+                clip-path: inset(30% 0 10% 0);
+            }
+            60% {
+                transform: translate(-2px, 2px);
+                clip-path: inset(20% 0 25% 0);
+            }
+            80% {
+                transform: translate(2px, -2px);
+                clip-path: inset(5% 0 15% 0);
+            }
+            100% {
+                transform: translate(0);
+                clip-path: inset(0 0 0 0);
+            }
+        }
+
+        @keyframes memories-color {
+            0%, 100% {
+                text-shadow: 1px 1px 2px rgba(30, 0, 30, 0.75), -1px -1px 2px rgba(0, 30, 0, 0.75), 0px 0px 2px rgba(0, 0, 30, 0.75);
+            }
+            50% {
+                text-shadow: 2px 2px 4px rgba(30, 30, 0, 0.75), -2px -2px 4px rgba(0, 30, 0, 0.75), 0px 0px 4px rgba(0, 0, 30, 0.75);
+            }
+        }
+
+        
+
+        .gallery-item img {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        
+        @keyframes tryToRemember {
+            0% {
+                transform: rotate(0deg);
+                filter: contrast(100%) brightness(100%);
+            }
+            25% {
+                transform: rotate(2deg);
+                filter: contrast(250%) brightness(250%);
+            }
+            50% {
+                transform: rotate(-2deg);
+                filter: contrast(150%) brightness(50%);
+            }
+            75% {
+                transform: rotate(-5deg);
+                filter: contrast(150%) brightness(150%);
+            }
+            100% {
+                transform: rotate(0deg);
+                filter: contrast(100%) brightness(150%);
+            }
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.5);
+            animation: tryToRemember 5s infinite ease-in-out;
+            filter: contrast(200%) brightness(150%);
+        }
+
+        .gallery-item:hover {
+            animation: memories 0.5s infinite;
+        }
+        
+
+
+        @keyframes somethingInTheBackground {
+            0% {
+                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/background.JPG') repeat, #FFDAB9;
+
+            }
+            20% {
+                background-color: #000000;
+                background: url('#') repeat, #000000;
+            }
+            40% {
+                background-color: #000000;
+                background: url('#') repeat, #000000;
+            }
+            60% {
+                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/background.JPG') repeat, #000000;
+
+            }
+            80% {
+                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/background.JPG') repeat, #000000;
+
+            }
+            100% {
+                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/background.JPG') repeat, #000000;
+
+            }
+        }
+        
+        #main-content h2 {
+            color: #8B4513;
+            font-weight: bold; 
+            position: relative;
+            overflow: hidden;
+        }
+        #main-content h2::before, h1.title::after {
+            content: 'Arroyo Cult Arts Board';
+            display: block;
+            position: relative;
+            top: 50%;
+            left: 0px;
+        }
+        #main-content h2:hover::before {
+            #animation: title 0.3s linear 6;
+            color: #000;
+            z-index: 2;
+        }
+        #main-content h2:hover::after {
+            animation: title 0.03 linear 6 reverse;
+            color: #fff;
+            z-index: 1;
+        }
+
+        #main-content h2::before, 
+        #main-content h2::after {
+            content: 'Arroyo Cult Arts Board';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: #FFF8DC;
+            background: transparent;
+            animation: memories 0.5s infinite;
+            z-index: -1;
+        }
+        #main-content h2::after {
+            animation-delay: 0.2s;
+            color: #FF0000;
+        }
+        
     </style>
 </head>
 
 <body>
+<script>
+    let animationTimeout;
+
+    document.addEventListener('mousemove', () => {
+        const body = document.body;
+
+        body.classList.add('animate');
+        document.querySelector('h1').classList.add('animate');
+
+        clearTimeout(animationTimeout);
+        animationTimeout = setTimeout(() => {
+            body.classList.remove('animate');
+            document.querySelector('h1').classList.remove('animate');
+        }, 300);
+    });
+    
+document.addEventListener('click', function (event) {
+    const styles = document.querySelectorAll('link[rel="stylesheet"], style');
+    const isDisabled = [...styles].every(style => style.disabled);
+
+    if (isDisabled) {
+        // Enable all styles
+        styles.forEach(style => style.disabled = false);
+    } else {
+        // Disable all styles
+        styles.forEach(style => style.disabled = true);
+    }
+});
+</script>
     <div id="header">
-        <h1>Arroyo Cult Arts Board</h1>
+        <h1 class="title">Arroyo Cult Arts Board</h1>
         <p><a href="#about">About</a> | <a href="#events">Events</a> | <a href="#support">Support</a> | <a href="#contact">Contact</a></p>
     </div>
 
@@ -219,3 +529,4 @@
 </body>
 
 </html>
+
