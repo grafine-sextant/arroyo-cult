@@ -430,6 +430,19 @@
             document.querySelector('h1').classList.remove('animate');
         }, 300);
     });
+
+document.addEventListener('touchmove', () => {
+        const body = document.body;
+
+        body.classList.add('animate');
+        document.querySelector('h1').classList.add('animate');
+
+        clearTimeout(animationTimeout);
+        animationTimeout = setTimeout(() => {
+            body.classList.remove('animate');
+            document.querySelector('h1').classList.remove('animate');
+        }, 300);
+    });
     
 document.addEventListener('click', function (event) {
     const styles = document.querySelectorAll('link[rel="stylesheet"], style');
