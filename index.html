@@ -121,6 +121,7 @@
                 background-position: 0px -20px;
                 filter: brightness(120%) blur(2px);
                 background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery9.jpg'), #000000;
+                background-size: cover;
             }
                         19% {
                 background-position: 0px -20px;
@@ -146,6 +147,7 @@
                 background-position: 0px -20px;
                 filter: brightness(120%) blur(2px);
                 background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png'), #000000;
+                background-size: cover;
             }
             50% {
                 background-position: 50px 50px;
@@ -162,6 +164,7 @@
                 background-position: 0px -20px;
                 filter: brightness(120%) blur(2px);
                 background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png'), #000000;
+                background-size: 200px 100px;
             }
             70% {
                 background-position: 0px -20px;
@@ -170,6 +173,7 @@
             }
             75% {
                 background-position: 0px 0px;
+                 background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery4.jpg'), #000000;
                 filter: brightness(110%) blur(0px);
                 
             }
@@ -187,11 +191,13 @@
                 background-position: 0px -20px;
                 filter: brightness(120%) blur(2px);
                 background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png'), #000000;
+                background-size: 100% auto;
             }
             94% {
                 background-position: 0px -20px;
                 filter: brightness(120%) blur(2px);
-                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery9.jpg'), #000000;
+                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery4.jpg'), #000000;
+                background-size: cover;
             }
             98% {
                 background-position: 0px -20px;
@@ -300,14 +306,14 @@
             box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .gallery-item img {
+        .gallery-item {
             width: 100%;
             height: auto;
             display: block;
             transition: transform 0.3s ease;
         }
 
-        .gallery-item:hover img {
+        .gallery-item:hover {
             transform: scale(1.1);
         }
 
@@ -368,7 +374,7 @@
 
         
 
-        .gallery-item img {
+        .gallery-item {
             transition: transform 0.3s ease, filter 0.3s ease;
         }
         
@@ -395,7 +401,7 @@
             }
         }
 
-        .gallery-item:hover img {
+        .gallery-item:hover {
             transform: scale(1.5);
             animation: tryToRemember 5s infinite ease-in-out;
             filter: contrast(200%) brightness(150%);
@@ -410,28 +416,45 @@
         @keyframes somethingInTheBackground {
             0% {
                 background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/background.JPG') repeat, #FFDAB9;
-
+align: left;
+                width: 50%
             }
             20% {
                 background-color: #000000;
                 background: url('#') repeat, #000000;
+                            align: left;
+                width: 10%
             }
             40% {
                 background-color: #000000;
                 background: url('#') repeat, #000000;
+                                           align: center;
+                width: 7%
             }
             60% {
                 background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/background.JPG') repeat, #000000;
-
+     align: right;
+                width: 15%
             }
             80% {
                 background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/background.JPG') repeat, #000000;
-
+         align: right;
+                width: 23%
             }
             100% {
                 background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/background.JPG') repeat, #000000;
-
+        align: right;
+                width: 50%
             }
+        }
+        
+        
+        
+ 
+        div.animate {
+            animation: somethingInTheBackground 2s infinite  steps(1);
+            animation: tryingSoHardToRemember 1s infinite steps(1);
+           // animation: divDestroyer 2s infinite steps(1);
         }
         
         #main-content h2 {
@@ -485,26 +508,62 @@
 
     document.addEventListener('mousemove', () => {
         const body = document.body;
-
         body.classList.add('animate');
+        
+        const main = document.getElementById("main-content");
+        main.classList.add('animate');
+        
+        const header = document.getElementById("header");
+        header.classList.add('animate');
+        
+        const footer = document.getElementById("footer");
+        footer.classList.add('animate');
+        
+        const gallery = document.getElementById("gallery");
+        gallery.classList.add('animate');
+    
         document.querySelector('h1').classList.add('animate');
 
         clearTimeout(animationTimeout);
         animationTimeout = setTimeout(() => {
             body.classList.remove('animate');
+            main.classList.remove('animate');
+            header.classList.remove('animate');
+            footer.classList.remove('animate');
+            gallery.classList.remove('animate');
             document.querySelector('h1').classList.remove('animate');
         }, 300);
+        
+        
+
+        
     });
 
 document.addEventListener('touchmove', () => {
         const body = document.body;
-
         body.classList.add('animate');
+        
+        const main = document.getElementById("main-content");
+        main.classList.add('animate');
+        
+        const header = document.getElementById("header");
+        header.classList.add('animate');
+        
+        const footer = document.getElementById("footer");
+        footer.classList.add('animate');
+        
+        const gallery = document.getElementById("gallery");
+        gallery.classList.add('animate');
+        
         document.querySelector('h1').classList.add('animate');
 
         clearTimeout(animationTimeout);
         animationTimeout = setTimeout(() => {
             body.classList.remove('animate');
+            main.classList.remove('animate');
+            header.classList.remove('animate');
+            footer.classList.remove('animate');
+            gallery.classList.remove('animate');
             document.querySelector('h1').classList.remove('animate');
         }, 300);
     });
@@ -527,7 +586,7 @@ document.addEventListener('click', function (event) {
         <p><a href="#about">About</a> | <a href="#events">Events</a> | <a href="#support">Support</a> | <a href="#contact">Contact</a></p>
     </div>
 
-    <div id="main-content">
+    <div id="main-content" class="gallery-item">
         <a id="about"><h2>About the Arroyo Cult Arts Board</h2></a>
         <p>
            Welcome to the Arroyo Cult Arts Board web page! We are dedicated to promoting the unique contemporary arts and preserving the cultural heritage of
