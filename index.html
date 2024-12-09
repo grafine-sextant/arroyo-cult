@@ -132,6 +132,8 @@
                 background-position: 50px -5px;
                 filter: brightness(120%) blur(2px);
                 width: 90%;
+                                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png'), #000000; background-size: 100px 100px;
+
             }
                         31% {
                 background-position: 0px -20px;
@@ -141,7 +143,7 @@
                         38% {
                 background-position: 0px -20px;
                 filter: brightness(120%) blur(2px);
-                background: url(''), #000000;
+                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png'), #000000;
             }
                         46% {
                 background-position: 0px -20px;
@@ -158,7 +160,8 @@
                         56% {
                 background-position: 0px -20px;
                 filter: brightness(120%) blur(2px);
-                background: url(''), #000000;
+                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png'), #000000;
+                 background-size: 40%;
             }
             65% {
                 background-position: 0px -20px;
@@ -169,7 +172,7 @@
             70% {
                 background-position: 0px -20px;
                 filter: brightness(120%) blur(2px);
-                background: url(''), #000000;
+                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png'), #000000;
             }
             75% {
                 background-position: 0px 0px;
@@ -186,6 +189,7 @@
                 background-position: 0px -20px;
                 filter: brightness(120%) blur(2px);
                 background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png'), #000000;
+                 background-size: cover;
             }
         91% {
                 background-position: 0px -20px;
@@ -313,9 +317,9 @@
             transition: transform 0.3s ease;
         }
 
-        .gallery-item:hover {
-            transform: scale(1.1);
-        }
+       //.gallery-item:hover {
+      //     transform: scale(1.1);
+       //}
 
         .gallery-item-caption {
             position: absolute;
@@ -374,9 +378,9 @@
 
         
 
-        .gallery-item {
-            transition: transform 0.3s ease, filter 0.3s ease;
-        }
+        //.gallery-item {
+        //    transition: transform 0.3s ease, filter 0.3s ease;
+        //}
         
         @keyframes tryToRemember {
             0% {
@@ -401,15 +405,15 @@
             }
         }
 
-        .gallery-item:hover {
-            transform: scale(1.5);
-            animation: tryToRemember 5s infinite ease-in-out;
-            filter: contrast(200%) brightness(150%);
-        }
+        //.gallery-item:hover {
+        //    transform: scale(1.5);
+        //    animation: tryToRemember 5s infinite ease-in-out;
+        //    filter: contrast(200%) brightness(150%);
+        //}
 
-        .gallery-item:hover {
-            animation: memories 0.5s infinite;
-        }
+       // .gallery-item:hover {
+       //     animation: memories 0.5s infinite;
+        //}
         
 
 
@@ -421,13 +425,13 @@ align: left;
             }
             20% {
                 background-color: #000000;
-                background: url('#') repeat, #000000;
+                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png'), #000000;
                             align: left;
                 width: 10%
             }
             40% {
                 background-color: #000000;
-                background: url('#') repeat, #000000;
+                background: url('https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png'), #000000;
                                            align: center;
                 width: 7%
             }
@@ -586,7 +590,7 @@ document.addEventListener('click', function (event) {
         <p><a href="#about">About</a> | <a href="#events">Events</a> | <a href="#support">Support</a> | <a href="#contact">Contact</a></p>
     </div>
 
-    <div id="main-content" class="gallery-item">
+    <div id="main-content">
         <a id="about"><h2>About the Arroyo Cult Arts Board</h2></a>
         <p>
            Welcome to the Arroyo Cult Arts Board web page! We are dedicated to promoting the unique contemporary arts and preserving the cultural heritage of
@@ -600,7 +604,7 @@ document.addEventListener('click', function (event) {
             traditions, and enrich the community through art. We strive to be a meeting place for artists and enthusiasts alike. Join us in keeping the arts alive!
         </p>
         
-        <div id="gallery">
+       <div id="gallery">
         <div class="gallery-item">
             <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery3.jpg" alt="Dune Landscape">
             <div class="gallery-item-caption">Dune Landscape</div>
@@ -625,18 +629,7 @@ document.addEventListener('click', function (event) {
             <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery2.jpg" alt="Above the sands">
             <div class="gallery-item-caption">Above the sands</div>
         </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery4.jpg" alt="Tile Face 3">
-            <div class="gallery-item-caption">Tile Face 3</div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery6.png" alt="Untitled">
-            <div class="gallery-item-caption">Untitled</div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/grafine-sextant/arroyo-cult/refs/heads/main/gallery/gallery8.png" alt="Birth-Rebirth">
-            <div class="gallery-item-caption">Birth-Rebirth</div>
-        </div>
+
     </div>
 
         <a id="events"><h2>Upcoming Events</h2></a>
